@@ -1,0 +1,8 @@
+﻿@using laIdealShipping.Entities
+@using laIdealShipping.Web.Helpers
+
+@{
+    var items = typeof(ShippingStatus).GetItems();
+}
+
+@Html.DropDownList("", items)

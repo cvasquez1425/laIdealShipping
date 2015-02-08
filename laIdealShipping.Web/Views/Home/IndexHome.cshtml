@@ -1,0 +1,38 @@
+﻿@model laIdealShipping.Entities.Shipping
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>La Ideal Shipping INC</h1>
+    <p class="lead">Toda Clase de Envios Desde U.S.A a La Republica Dominicana.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Embargues</h2>
+        <img src="~/Images/dr-flag.jpg" alt="Dominican Republic" width="42" height="42" />
+        <p>
+            Nuestro Servicio Grantizado, vale más que cualquier precio de la competencia.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Que Hacemos</h2>
+        <p>
+            Envios de Vehiculos &bull; Envios de Cajas (Ropa - Comida) &bull; Electródomesticos &bull; Herramientas
+            &bull; Carga Comercial e Industrial
+            &bull; Mudanza A Republica Dominicana y De Puerta a Puerta &bull; Rentamos Contenedores &bull; Estimados Gratis
+            &bull; Le Consolidadmos Su Carga Comercial de Puerta a Puerta.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Proxima Salida</h2>
+        <div class="well-sm">
+            Nuestra Proxima Salida Sera @Html.DisplayFor(m => m.salida)
+        </div>
+    </div>
+</div>
+
+
+

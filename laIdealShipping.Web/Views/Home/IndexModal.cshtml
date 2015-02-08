@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index Modal Component in Bootstrap";
+}
+
+<h2>Index Modal Bootstrap</h2>
+
+<div class="row">
+    <div class="col-md-4 col-md-push-3">
+        <div class="">
+            <button id="showModal" class="btn btn-danger">Click Me!</button>
+        </div>
+    </div>
+</div>
+
+<div id="theModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">Hello!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is a Boostrap modal in an ASP.NET MVC Application.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Save Changes
+                        </button>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+   @*it's inside of the scripts section of this index page, so the scripts section of course gets rendered into the layout view when it says, RenderSection scripts, so this script will appear at the
+   bottom of the page. Typically you'd want to take this code and put it into a separate js file, but I just have it here so we can put everything on the screen at one time.*@
+
+    @section scripts {
+        <script>
+            $(function () {
+
+                var showModal = function () {
+                    $("#theModal").modal("show");
+                };
+                //what the code is doing when the dom is ready is wiring up a click event to that button, when the user clicks on it, we'll go out  and find the element with the ID of the theModal and then
+                //we'll tell it to show.
+                $("#showModal").click(showModal);    
+            });
+
+        </script>
+
+    }

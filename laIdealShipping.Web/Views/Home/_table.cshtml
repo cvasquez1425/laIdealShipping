@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "_table";
+}
+
+<h2>_table</h2>
+<div class="row">
+    <div class="col-md-2 text-center">
+        Same tabular data
+    </div>
+</div>
+    <div class="col-md-10">
+        <table class="table table-condensed table-striped table-hover">
+            <caption>Months Of The Year</caption>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Days</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>28<span class="text-danger">*</span></td>
+                </tr>
+                <tr class="success">
+                    <td>March</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>April</td>
+                    <td>30</td>
+                </tr>
+                <tr class="danger">
+                    <td>May</td>
+                    <td>31</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-6 col-md-push-3">
+        <div class="">
+            <button id="showModal" class="btn btn-danger">Click me!</button>
+        </div>
+    </div>
+
+<div id="theModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <h4 class="modal-title">Hello!</h4>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This is a Boostrap modal in an ASP.NET MVC Applicaition.</p>
+            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Save Changes
+                        </button>
+                    </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(function () {
+
+            var showModal = function () {
+                $("#theModal").modal("show");
+            };
+
+            $("#showModal").click(showModal);
+        })
+    </script>
+}
