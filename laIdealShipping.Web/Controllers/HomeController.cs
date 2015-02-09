@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using laIdealShipping.Entities;
 using laIdealShipping.Web.DataContexts;
+using System.Data.Entity;
 
 namespace laIdealShipping.Web.Controllers
 {
@@ -13,6 +14,26 @@ namespace laIdealShipping.Web.Controllers
     public class HomeController : Controller
     {
         private static laIdealShippingsDb _db = new laIdealShippingsDb();
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult ShippingMaintenance(Shipping shipping)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Entry(shipping).State = EntityState.Modified;
+                _db.SaveChanges();
+                    return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult ShippingMaintenance()
+        {
+            return View();
+        }
 
         [Authorize]
         public ActionResult Shipping()
