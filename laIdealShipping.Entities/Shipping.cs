@@ -15,9 +15,9 @@ namespace laIdealShipping.Entities
     {
         public int Id { get; set; }
 
-        [Display(Name = "Proxima Salida")]
+        [Display(Name = "Next Departure")]
         public DateTime nextShippingDate { get; set; }
-        [Display(Name="Salida")]
+        [Display(Name="Departure")]
         public bool salida { get; set; }
 
         public ShippingStatus Status { get; set; }

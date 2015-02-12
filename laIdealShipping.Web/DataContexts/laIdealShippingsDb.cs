@@ -31,8 +31,9 @@ namespace laIdealShipping.Web.DataContexts
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Book>      Books       { get; set; }          // DbSet will map to a table that is why ORM object-relational mapper.
-        public DbSet<Shipping>  Shippings   { get; set; }
-        public DbSet<Contact>   Contacts    { get; set; }
+        public DbSet<Book>      Books                       { get; set; }          // DbSet will map to a table that is why ORM object-relational mapper.
+        public DbSet<Shipping>  Shippings                   { get; set; }
+        public DbSet<Contact>   Contacts                    { get; set; }
+        public DbSet<ShippingViewModel> ShippingsViewModel  { get; set; }
     }
 }

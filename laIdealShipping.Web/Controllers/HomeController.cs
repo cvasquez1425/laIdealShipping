@@ -32,7 +32,10 @@ namespace laIdealShipping.Web.Controllers
         [Authorize]
         public ActionResult ShippingMaintenance()
         {
-            return View();
+            var model = from s in _db.Shippings
+                        select s;
+
+            return View(model);
         }
 
         [Authorize]
