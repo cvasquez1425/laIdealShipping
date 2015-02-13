@@ -12,6 +12,7 @@ namespace laIdealShipping.Entities
     /// </summary>
     public class ShippingViewModel
     {
+        [Key]
         public int VM_Id { get; set; }
 
         [Display(Name = "Next Departure")]

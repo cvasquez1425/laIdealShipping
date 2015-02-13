@@ -226,6 +226,10 @@
     <Compile Include="DataContexts\laIdealShippingMigrations\201410221847327_DefaultSchema.Designer.cs">
       <DependentUpon>201410221847327_DefaultSchema.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataContexts\laIdealShippingMigrations\201502130349244_ShippingsViewModel.cs" />
+    <Compile Include="DataContexts\laIdealShippingMigrations\201502130349244_ShippingsViewModel.Designer.cs">
+      <DependentUpon>201502130349244_ShippingsViewModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataContexts\laIdealShippingMigrations\Configuration.cs" />
     <Compile Include="DataContexts\laIdealShippingsDb.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
@@ -365,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201410221847327_DefaultSchema.resx">
       <DependentUpon>201410221847327_DefaultSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201502130349244_ShippingsViewModel.resx">
+      <DependentUpon>201502130349244_ShippingsViewModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
