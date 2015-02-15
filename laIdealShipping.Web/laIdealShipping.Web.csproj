@@ -253,6 +253,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\Air Freight.JPG" />
+    <Content Include="Images\Carrousel1.jpg" />
     <Content Include="Images\Domestic Freight.JPG" />
     <Content Include="Images\DR Map &amp; Flag.jpg" />
     <Content Include="Images\dr-flag.jpg" />

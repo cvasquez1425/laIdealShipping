@@ -11,9 +11,10 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <hr />
+    <hr />
+    @*<form class="form-horizontal">
         <fieldset>
-            <legend>Departure Information</legend>
+            <legend>Departure Information</legend>*@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
                 @Html.LabelFor(model => model.nextShippingDate, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -40,13 +41,14 @@
                     @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
                 </div>
             </div>
-
+             <br/>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Create" class="btn btn-default" />
                 </div>
             </div>
-        </fieldset>
+        @*</fieldset>
+    </form>*@
     </div>
 }
 
