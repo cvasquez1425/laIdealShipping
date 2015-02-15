@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using laIdealShipping.Entities;
 using laIdealShipping.Web.DataContexts;
 using System.Data.Entity;
+using System.Net;
 
 namespace laIdealShipping.Web.Controllers
 {
@@ -39,15 +40,22 @@ namespace laIdealShipping.Web.Controllers
         }
 
         [Authorize]
-        public ActionResult Shipping()
+        public ActionResult ShippingCreate()
         {
-            return View();
+            Shipping model = new Shipping
+            {
+                nextShippingDate = DateTime.Now,
+                salida = false,
+                Status = 0
+
+            };
+            return View(model);
         }
 
         // POST Shipping/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Shipping([Bind(Include = "Id,nextShippingDate,salida,Status")] Shipping shipping)
+        public ActionResult ShippingCreate([Bind(Include = "Id,nextShippingDate,salida,Status")] Shipping shipping)
         {
             if (ModelState.IsValid)
             {
@@ -56,6 +64,70 @@ namespace laIdealShipping.Web.Controllers
                 return RedirectToAction("Index");
             }
             return View(shipping);
+        }
+
+        //GET: Shipping Edit
+        public ActionResult ShippingEdit(int? Id)
+        {
+            //var model = _db.Shippings.Single(s => s.Id = Id);
+
+            if ( Id == null )
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Shipping shipping = _db.Shippings.Find(Id);
+            if (shipping == null)
+            {
+                return HttpNotFound();
+            }
+            return View(shipping);
+        }
+
+        //HTTP:POST Shipping/Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ShippingEdit(int Id, [Bind(Include="Id,nextShippingDate,salida,Status")] Shipping shipping)
+        {
+            var model = _db.Shippings.Single(s => s.Id == Id);
+
+            //if (ModelState.IsValid)
+            if (TryUpdateModel(model))
+            {
+                var attachedEntry = _db.Entry(model);
+                attachedEntry.CurrentValues.SetValues(model);
+
+                //_db.Entry(shipping).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(shipping);
+
+        }
+
+        // GET: Shipping/Delete
+        public ActionResult ShippingDelete(int? Id)
+        {
+            if ( Id == null )
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Shipping shipping = _db.Shippings.Find(Id);
+            if (shipping == null)
+            {
+                return HttpNotFound();
+            }
+            return View(shipping);
+        }
+
+        //POST: Shipping/Confirm Delete
+        [HttpPost, ActionName("ShippingDelete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult ShippingDeleteConfirm(int Id)
+        {
+            Shipping shipping = _db.Shippings.Find(Id);
+            _db.Shippings.Remove(shipping);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         public ActionResult IndexHome()
@@ -71,8 +143,9 @@ namespace laIdealShipping.Web.Controllers
         public ActionResult Index()
         {
             var result = (from s in _db.Shippings
-                         where s.salida == true
-                         select s).ToList().SingleOrDefault(); // .Single();
+                          select s.nextShippingDate).Max();
+            //)ToList().SingleOrDefault(); // .Single();
+            ViewData["nextDepartureDate"] = result.ToShortDateString();
             return View(result);
         }
 

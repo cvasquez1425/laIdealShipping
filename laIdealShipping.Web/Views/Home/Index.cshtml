@@ -1,5 +1,6 @@
-﻿@using laIdealShipping.Entities
-@model laIdealShipping.Entities.Shipping
+﻿@*@using laIdealShipping.Entities
+@model laIdealShipping.Entities.Shipping*@
+
 @{
     ViewBag.Title = "Home Page";
 }
@@ -82,7 +83,8 @@
                 <h3>Next Departure</h3>
                 <div class="well">
                     <p>
-                        Our Next Departure Date @Html.DisplayFor(m => m.nextShippingDate)
+                        @*Our Next Departure Date @Html.DisplayFor(m => m.nextShippingDate)*@
+                        Our Next Departure Date @ViewData["nextDepartureDate"]
                     </p>
                 </div>
             </div>

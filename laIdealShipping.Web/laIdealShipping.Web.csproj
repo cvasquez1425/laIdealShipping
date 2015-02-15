@@ -316,6 +316,9 @@
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Home\_table.cshtml" />
     <Content Include="Views\Home\ShippingMaintenance.cshtml" />
+    <Content Include="Views\Home\ShippingCreate.cshtml" />
+    <Content Include="Views\Home\ShippingEdit.cshtml" />
+    <Content Include="Views\Home\ShippingDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
