@@ -25,7 +25,7 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Services", "Shipping", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contacts", "Home")</li>
-                    <li>@Html.ActionLink("Shipping Maintenance","ShippingMaintenance","Home")</li>
+                    <li>@Html.ActionLink("Shipping Maintenance", "ShippingMaintenance", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -34,12 +34,15 @@
     <div class="container">
         @RenderBody()
         <hr />
-        <footer class="row" style="color:#dadada;background:#555555;padding:20px 30px;">
+        <footer class="row" style="color:#dadada;background:#555555;padding:20px 30px">
             <div class="col-md-4 md-margin-bottom-40">
                 <div class="headline">
                     <h2 style="color:#e4e4e4">About La Ideal Shipping</h2>
                 </div>
-                <p>The Institute for the Professional Development of Adult Educators is an initiative supported by Florida Department of Education to offer information, resources and professional development for adult education career pathways programs.</p>
+                <p>
+                    We are a shipping company located in the heart of the city of Margate
+                    We've been operating since 2000 servicing the counties of Miami Dade, Broward, and Palm Beach.
+                </p>
             </div>
             <div class="col-md-4 md-margin-bottom-40">
                 <div class="headline">
@@ -54,8 +57,8 @@
                 <p>Contact us @@ laidealinfo@@hotmail.com</p>
             </div>
             <div class="row">
-                <div class="col-md-12">                    
-                        <p>&copy; @DateTime.Now.Year - La Ideal ASP.NET Web Site</p>
+                <div class="col-md-12">
+                    <p>&copy; @DateTime.Now.Year - La Ideal ASP.NET Web Site</p>
                 </div>
             </div>
 
