@@ -23,7 +23,6 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Services", "Shipping", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contacts", "Home")</li>
                     <li>@Html.ActionLink("Shipping Maintenance", "ShippingMaintenance", "Home")</li>
                 </ul>
@@ -37,7 +36,7 @@
         <footer class="row" style="color:#dadada;background:#555555;padding:20px 30px">
             <div class="col-md-4 md-margin-bottom-40">
                 <div class="headline">
-                    <h2 style="color:#e4e4e4">About La Ideal Shipping</h2>
+                    <h2 style="color: rgb(228, 228, 228);">About La Ideal Shipping</h2><br>
                 </div>
                 <p>
                     We are a shipping company located in the heart of the city of Margate
@@ -46,19 +45,26 @@
             </div>
             <div class="col-md-4 md-margin-bottom-40">
                 <div class="headline">
-                    <h2 style="color:#e4e4e4">Stay Conected</h2>
+                    <h2 style="color: rgb(228, 228, 228);">Stay Conected</h2>
                 </div>
                 <p>Subscribe to our mailing list to stay up to date!</p>
+                <a class="btn btn-u" href="@Url.Action("Contacts", "Home")"><span class="glyphicon glyphicon-envelope"> Join Mailing List</span></a>
             </div>
             <div class="col-md-4 md-margin-bottom-40">
                 <div class="headline">
-                    <h2 style="color:#e4e4e4">Contact Us</h2>
+                    <h2 style="color: rgb(228, 228, 228);">Contact Us</h2>
                 </div>
-                <p>Contact us @@ laidealinfo@@hotmail.com</p>
+                5621 NW 8 St - Bay 1 Margate, FL 33063
+                <br/>
+                <i class="glyphicon glyphicon-phone"></i>
+                <strong> 305-984-9643</strong>
+                <br/>
+                <i class="glyphicon glyphicon-envelope"></i>
+                <a href="mailto:info@laidealshipping.com"> info@@laidealshipping.com</a>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p>&copy; @DateTime.Now.Year - La Ideal ASP.NET Web Site</p>
+                    <p>© 2015 - La Ideal ASP.NET Web Site</p>
                 </div>
             </div>
 
