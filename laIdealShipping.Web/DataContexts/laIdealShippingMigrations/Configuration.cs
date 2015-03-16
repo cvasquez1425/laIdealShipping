@@ -2,9 +2,11 @@ namespace laIdealShipping.Web.DataContexts.laIdealShippingMigrations
 {
     using Microsoft.AspNet.Identity;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using laIdealShipping.Web.DataContexts;
 
     internal sealed class Configuration : DbMigrationsConfiguration<laIdealShipping.Web.DataContexts.laIdealShippingsDb>
     {
@@ -28,7 +30,7 @@ namespace laIdealShipping.Web.DataContexts.laIdealShippingMigrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //
+            //           
         }
     }
 }

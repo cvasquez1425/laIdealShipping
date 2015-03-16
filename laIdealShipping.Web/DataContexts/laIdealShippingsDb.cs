@@ -27,7 +27,7 @@ namespace laIdealShipping.Web.DataContexts
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("laideal");
+            modelBuilder.HasDefaultSchema("laidealshipping");
             base.OnModelCreating(modelBuilder);
         }
 
