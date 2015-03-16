@@ -16,7 +16,7 @@ namespace laIdealShipping.Web.DataContexts
         public laIdealShippingsDb()
             : base("DefaultConnection")
         {
-            Database.Log = sql => Debug.Write(sql);                 // I am doing this in the constructor so every instance of DbContext will be logging something.
+            //Database.Log = sql => Debug.Write(sql);                 // I am doing this in the constructor so every instance of DbContext will be logging something.
         }
 
         /// <summary>
