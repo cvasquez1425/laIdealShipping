@@ -18,6 +18,19 @@ namespace laIdealShipping.Web.DataContexts.IdentityMigrations
 
         protected override void Seed(laIdealShipping.Web.DataContexts.IdentityDb context)
         {
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
+
             // Traditional Entity Framework Approach to seed the database
             //var hasher = new PasswordHasher();
             //context.Users.AddOrUpdate(u => u.Email,
@@ -41,6 +54,7 @@ namespace laIdealShipping.Web.DataContexts.IdentityMigrations
                 roleManager.Create(new IdentityRole { Name = "admin" });
                 manager.AddToRole(user.Id, "admin");
             }
+
         }
     }
 }

@@ -7,13 +7,13 @@ namespace laIdealShipping.Web.DataContexts.laIdealShippingMigrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class AddingContactInfo : IMigrationMetadata
+    public sealed partial class InitialCreateGoDaddy : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddingContactInfo));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreateGoDaddy));
         
         string IMigrationMetadata.Id
         {
-            get { return "201409291407445_AddingContactInfo"; }
+            get { return "201503172001352_InitialCreateGoDaddy"; }
         }
         
         string IMigrationMetadata.Source

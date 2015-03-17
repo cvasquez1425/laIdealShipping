@@ -168,58 +168,14 @@
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataContexts\IdentityDb.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201409041937300_InitialCreate.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201409041937300_InitialCreate.Designer.cs">
-      <DependentUpon>201409041937300_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\IdentityMigrations\201410221848455_DefaultSchema.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201410221848455_DefaultSchema.Designer.cs">
-      <DependentUpon>201410221848455_DefaultSchema.cs</DependentUpon>
+    <Compile Include="DataContexts\IdentityMigrations\201503172013218_InitialIdentityGoDaddy.cs" />
+    <Compile Include="DataContexts\IdentityMigrations\201503172013218_InitialIdentityGoDaddy.Designer.cs">
+      <DependentUpon>201503172013218_InitialIdentityGoDaddy.cs</DependentUpon>
     </Compile>
     <Compile Include="DataContexts\IdentityMigrations\Configuration.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409041934267_InitialCreate.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409041934267_InitialCreate.Designer.cs">
-      <DependentUpon>201409041934267_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409092114235_schemaShipping.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409092114235_schemaShipping.Designer.cs">
-      <DependentUpon>201409092114235_schemaShipping.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409092120046_schemaShipping2.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409092120046_schemaShipping2.Designer.cs">
-      <DependentUpon>201409092120046_schemaShipping2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409151836581_SchemaShippingAddField.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409151836581_SchemaShippingAddField.Designer.cs">
-      <DependentUpon>201409151836581_SchemaShippingAddField.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409271526373_laIdealShippingDb.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409271526373_laIdealShippingDb.Designer.cs">
-      <DependentUpon>201409271526373_laIdealShippingDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409291407445_AddingContactInfo.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409291407445_AddingContactInfo.Designer.cs">
-      <DependentUpon>201409291407445_AddingContactInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409291416147_AddingContactInfoAttributes.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409291416147_AddingContactInfoAttributes.Designer.cs">
-      <DependentUpon>201409291416147_AddingContactInfoAttributes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409291422450_AddingContactInfoAttributes2.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409291422450_AddingContactInfoAttributes2.Designer.cs">
-      <DependentUpon>201409291422450_AddingContactInfoAttributes2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409291610334_AddingContactInfoAttributes3.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201409291610334_AddingContactInfoAttributes3.Designer.cs">
-      <DependentUpon>201409291610334_AddingContactInfoAttributes3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201410221847327_DefaultSchema.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201410221847327_DefaultSchema.Designer.cs">
-      <DependentUpon>201410221847327_DefaultSchema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataContexts\laIdealShippingMigrations\201502130349244_ShippingsViewModel.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201502130349244_ShippingsViewModel.Designer.cs">
-      <DependentUpon>201502130349244_ShippingsViewModel.cs</DependentUpon>
+    <Compile Include="DataContexts\laIdealShippingMigrations\201503172001352_InitialCreateGoDaddy.cs" />
+    <Compile Include="DataContexts\laIdealShippingMigrations\201503172001352_InitialCreateGoDaddy.Designer.cs">
+      <DependentUpon>201503172001352_InitialCreateGoDaddy.cs</DependentUpon>
     </Compile>
     <Compile Include="DataContexts\laIdealShippingMigrations\Configuration.cs" />
     <Compile Include="DataContexts\laIdealShippingsDb.cs" />
@@ -227,6 +183,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\EnumHelpers.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -334,44 +291,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DataContexts\IdentityMigrations\201409041937300_InitialCreate.resx">
-      <DependentUpon>201409041937300_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="DataContexts\IdentityMigrations\201503172013218_InitialIdentityGoDaddy.resx">
+      <DependentUpon>201503172013218_InitialIdentityGoDaddy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\IdentityMigrations\201410221848455_DefaultSchema.resx">
-      <DependentUpon>201410221848455_DefaultSchema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409041934267_InitialCreate.resx">
-      <DependentUpon>201409041934267_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409092114235_schemaShipping.resx">
-      <DependentUpon>201409092114235_schemaShipping.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409092120046_schemaShipping2.resx">
-      <DependentUpon>201409092120046_schemaShipping2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409151836581_SchemaShippingAddField.resx">
-      <DependentUpon>201409151836581_SchemaShippingAddField.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409271526373_laIdealShippingDb.resx">
-      <DependentUpon>201409271526373_laIdealShippingDb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409291407445_AddingContactInfo.resx">
-      <DependentUpon>201409291407445_AddingContactInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409291416147_AddingContactInfoAttributes.resx">
-      <DependentUpon>201409291416147_AddingContactInfoAttributes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409291422450_AddingContactInfoAttributes2.resx">
-      <DependentUpon>201409291422450_AddingContactInfoAttributes2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201409291610334_AddingContactInfoAttributes3.resx">
-      <DependentUpon>201409291610334_AddingContactInfoAttributes3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201410221847327_DefaultSchema.resx">
-      <DependentUpon>201410221847327_DefaultSchema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201502130349244_ShippingsViewModel.resx">
-      <DependentUpon>201502130349244_ShippingsViewModel.cs</DependentUpon>
+    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201503172001352_InitialCreateGoDaddy.resx">
+      <DependentUpon>201503172001352_InitialCreateGoDaddy.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
