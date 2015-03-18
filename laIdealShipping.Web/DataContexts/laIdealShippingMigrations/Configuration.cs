@@ -7,6 +7,7 @@ namespace laIdealShipping.Web.DataContexts.laIdealShippingMigrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using laIdealShipping.Web.DataContexts;
+    using laIdealShipping.Entities;
 
     internal sealed class Configuration : DbMigrationsConfiguration<laIdealShipping.Web.DataContexts.laIdealShippingsDb>
     {
@@ -30,7 +31,9 @@ namespace laIdealShipping.Web.DataContexts.laIdealShippingMigrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //           
+            //
+            context.Shippings.AddOrUpdate(s => s.nextShippingDate,
+                                     new Shipping { Id = 1, nextShippingDate = System.DateTime.Now, salida = true, Status = ShippingStatus.Active });
         }
     }
 }
