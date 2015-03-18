@@ -3,7 +3,7 @@ namespace laIdealShipping.Web.DataContexts.IdentityMigrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialIdentityGoDaddy : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {

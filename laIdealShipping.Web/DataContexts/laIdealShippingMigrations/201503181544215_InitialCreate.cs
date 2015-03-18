@@ -3,12 +3,12 @@ namespace laIdealShipping.Web.DataContexts.laIdealShippingMigrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreateGoDaddy : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "laidealshipping.Contacts",
+                "laideal.Contacts",
                 c => new
                     {
                         contactId = c.Int(nullable: false, identity: true),
@@ -22,7 +22,7 @@ namespace laIdealShipping.Web.DataContexts.laIdealShippingMigrations
                 .PrimaryKey(t => t.contactId);
             
             CreateTable(
-                "laidealshipping.Shippings",
+                "laideal.Shippings",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -36,8 +36,8 @@ namespace laIdealShipping.Web.DataContexts.laIdealShippingMigrations
         
         public override void Down()
         {
-            DropTable("laidealshipping.Shippings");
-            DropTable("laidealshipping.Contacts");
+            DropTable("laideal.Shippings");
+            DropTable("laideal.Contacts");
         }
     }
 }

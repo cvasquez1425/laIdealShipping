@@ -168,14 +168,14 @@
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataContexts\IdentityDb.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201503172013218_InitialIdentityGoDaddy.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201503172013218_InitialIdentityGoDaddy.Designer.cs">
-      <DependentUpon>201503172013218_InitialIdentityGoDaddy.cs</DependentUpon>
+    <Compile Include="DataContexts\IdentityMigrations\201503181546253_InitialCreate.cs" />
+    <Compile Include="DataContexts\IdentityMigrations\201503181546253_InitialCreate.Designer.cs">
+      <DependentUpon>201503181546253_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="DataContexts\IdentityMigrations\Configuration.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201503172001352_InitialCreateGoDaddy.cs" />
-    <Compile Include="DataContexts\laIdealShippingMigrations\201503172001352_InitialCreateGoDaddy.Designer.cs">
-      <DependentUpon>201503172001352_InitialCreateGoDaddy.cs</DependentUpon>
+    <Compile Include="DataContexts\laIdealShippingMigrations\201503181544215_InitialCreate.cs" />
+    <Compile Include="DataContexts\laIdealShippingMigrations\201503181544215_InitialCreate.Designer.cs">
+      <DependentUpon>201503181544215_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="DataContexts\laIdealShippingMigrations\Configuration.cs" />
     <Compile Include="DataContexts\laIdealShippingsDb.cs" />
@@ -291,11 +291,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DataContexts\IdentityMigrations\201503172013218_InitialIdentityGoDaddy.resx">
-      <DependentUpon>201503172013218_InitialIdentityGoDaddy.cs</DependentUpon>
+    <EmbeddedResource Include="DataContexts\IdentityMigrations\201503181546253_InitialCreate.resx">
+      <DependentUpon>201503181546253_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201503172001352_InitialCreateGoDaddy.resx">
-      <DependentUpon>201503172001352_InitialCreateGoDaddy.cs</DependentUpon>
+    <EmbeddedResource Include="DataContexts\laIdealShippingMigrations\201503181544215_InitialCreate.resx">
+      <DependentUpon>201503181544215_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

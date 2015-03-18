@@ -32,7 +32,7 @@ namespace laIdealShipping.Web.DataContexts
         {
             Database.SetInitializer<laIdealShipping.Web.DataContexts.laIdealShippingsDb>(null);
             
-            modelBuilder.HasDefaultSchema("laidealshipping");
+            modelBuilder.HasDefaultSchema("laideal");
             base.OnModelCreating(modelBuilder);
         }
 
