@@ -9,7 +9,7 @@ using System.Web;
 namespace laIdealShipping.Web.DataContexts
 {
     public class IdentityDb : IdentityDbContext<ApplicationUser>      // user password loging roles all that stuff goes into IdentityDbContext
-    {
+    {        
         public IdentityDb()                     // database context to actually talk to SQL Server. I am using the same connection string for both, so I'll two data contexts, but they'll talk to the database through the same db connection.
             : base("DefaultConnection")
         {
@@ -17,6 +17,8 @@ namespace laIdealShipping.Web.DataContexts
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            Database.SetInitializer<laIdealShipping.Web.DataContexts.IdentityDb>(null);
+
             modelBuilder.HasDefaultSchema("identity");
             base.OnModelCreating(modelBuilder);
         }

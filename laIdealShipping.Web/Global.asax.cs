@@ -18,8 +18,8 @@ namespace laIdealShipping.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Database.SetInitializer<laIdealShipping.Web.DataContexts.laIdealShippingsDb>(null);
-            Database.SetInitializer<laIdealShipping.Web.DataContexts.IdentityDb>(null);
+            //Database.SetInitializer<laIdealShipping.Web.DataContexts.laIdealShippingsDb>(null);
+            //Database.SetInitializer<laIdealShipping.Web.DataContexts.IdentityDb>(null);
         }
     }
 }

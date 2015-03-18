@@ -13,6 +13,9 @@ namespace laIdealShipping.Web.DataContexts
     /// </summary>
     public class laIdealShippingsDb : DbContext         
     {
+        public DbSet<Shipping> Shippings { get; set; }      // DbSet will map to a table that is why ORM object-relational mapper.
+        public DbSet<Contact> Contacts { get; set; }
+        
         public laIdealShippingsDb()
             : base("DefaultConnection")
         {
@@ -27,11 +30,11 @@ namespace laIdealShipping.Web.DataContexts
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            Database.SetInitializer<laIdealShipping.Web.DataContexts.laIdealShippingsDb>(null);
+            
             modelBuilder.HasDefaultSchema("laidealshipping");
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Shipping>  Shippings                   { get; set; }      // DbSet will map to a table that is why ORM object-relational mapper.
-        public DbSet<Contact>   Contacts                    { get; set; }
     }
 }
